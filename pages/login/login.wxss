@@ -1,0 +1,66 @@
+/**index.wxss**/
+page{
+  width: 100%;
+  height: 100%;
+}
+.big_logo{
+  width: 100%;
+  height: 33%;
+  border-top: 1rpx solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+}
+.big_logo image{
+  width: 100%;
+  margin:0 auto;
+  height:260rpx;
+}
+.big_logo .name{
+  width: 100%;
+  text-align: center;
+  font-family: PingFangSC-Medium;
+  font-size: 38rpx;
+  color: #675E5E;
+  letter-spacing: 0;
+  line-height: 70rpx;
+}
+.bind-bg {
+  width: 100%;
+  height: 66%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+}
+
+.bind-input {
+  width: 86%;
+  color: #262626;
+  border-bottom: 1rpx solid #e6e6e6;
+  height: 82rpx;
+  margin-top: 30rpx;
+  font-size: 32rpx;
+}
+
+.bind-btn, .bind-btn-disabled {
+  width: 86%;
+  border-radius: 4rpx;
+  background-color: #e60a7b;
+  color: white;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 98rpx;
+  height: 98rpx;
+  margin-top: 70rpx;
+}
+.bind-CCC{
+  background: #c6c6c6
+}
+.placeholder-class{
+  color: #c6c6c6
+}
+.bind-btn-disabled {
+  background-color: #ccc;
+}

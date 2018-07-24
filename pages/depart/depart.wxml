@@ -1,0 +1,79 @@
+
+<view class="containerSearch1">
+    <view class="searchInt">
+        <input type="text" auto-focus focus="true" class="markInput1"  bindinput="searchInput" placeholder="请输入要查询的内容" placeholder-style="color:#CDD0DE;"/>
+        <image src="/img/search.png"></image>
+    </view>
+    <view class="cancel" bindtap="backManager">取消</view>
+</view>
+<view class="cell">
+   
+    <view class="cell-bd">
+        <text class="required">城市</text>
+    </view>
+    <view class="cell-ft bldafter">
+      <picker bindchange="updateOpin" value="{{indexType}}" range="{{opinionType}}" range-key="type">
+        {{indexType?indexType:"请选择"}}
+      </picker>
+    </view>
+ </view>
+
+ <view class="screen-timeline">
+        <view class="week-month">   
+            <view class="timeline-weekmonth {{thisWeek?'choosdiv':'' }}" bindtap="weekSelect">
+                <!-- <view class="week">近7天</view> -->
+               <!--  <view class="line" wx:if="{{thisWeek}}">  
+                    <view class="bottom-line"></view>
+                </view> -->
+                近7天
+            </view>
+            <view class="timeline-weekmonth {{thisMonth?'choosdiv':''}}" bindtap="monthSelect">
+                <!-- <view class="month">近1个月</view> -->
+                <!-- <view class="line" wx:if="{{thisMonth}}">
+                    <view class="bottom-line"></view>
+                </view> -->
+                近1个月
+            </view>
+
+        </view>
+        <view class="timeline-free {{thisFree?'choosdiv':''}}">
+            <picker mode="date" value="{{startTimeDate}}" start="2017-01-01" end="2027-12-31" bindchange="bindstartChange">
+                <view class="startime" bindtap="selectStarTime">{{ startTimeDate }}</view>
+            </picker>
+            <view class="content">至</view>
+            <picker mode="date" value="{{endTimeDate}}" start="2017-01-01" end="2027-12-31" bindchange="bindendChange">
+                <view class="endtime" bindtap="selectEndTime">{{ endTimeDate }}</view>
+            </picker>
+        </view>
+    </view>
+
+
+<view class="explain-argument">
+        <view class="argumentAmount">
+             <view class="argument-unit">单位（元）</view>
+             <view class="transverseLine"></view>
+             <view class="argumentAmount">
+                <view class="boxRed"></view><view>销售额</view>
+                <view class="boxBlue"></view><view>丢失额</view>
+             </view>
+        </view>
+       
+        <view class="goodsDetail" id="BLDlostMessage" bindtap="otherChart">其他图表</view>
+    </view>
+
+    <view class="page-body">
+        <view class="page-body-wrapper">
+                <canvas canvas-id="lineCanvas" class="canvas" bindtouchstart="touchHandler" bindtouchmove="moveHandler"
+                bindtouchend="touchEndHandler"></canvas>
+        </view>
+</view>
+<view class="cell">
+   
+    <view class="cell-bd">
+        <text class="required">报表图片</text>
+    </view>
+ </view>
+<view class="imgTable">
+	<image style="width:100%；" bindtap="previewImage"  src='{{scene}}'></image>
+</view>
+

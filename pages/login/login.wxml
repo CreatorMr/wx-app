@@ -1,0 +1,11 @@
+<!--  -->
+
+<view class="big_logo">
+  <image src="/img/logo.jpeg" ></image>
+  <view class="name">DATA_REPORT</view>
+</view>
+<view class="bind-bg">
+  <input type="text" class="bind-input" placeholder="请输入账号" bindinput="bindInputPhone"/>
+  <input type="password" class="bind-input" placeholder="请输入密码" bindinput="bindInputPass"/>
+  <view class="{{CCC?'':'bind-CCC'}} bind-btn " catchtap="login">登录</view> 
+</view>
